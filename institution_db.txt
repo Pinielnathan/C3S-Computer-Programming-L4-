@@ -1,0 +1,4 @@
+STU: Nathan | ID-1234 | DUR: 4 Weeks (Accelerated)
+STU: Divine | ID-1234 | DUR: 12 Weeks (Standard)
+STU: Divine | ID-1234 | DUR: 12 Weeks (Standard)
+STU: Tate | ID-9090 | DUR: 12 Weeks (Standard)

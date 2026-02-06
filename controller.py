@@ -2,10 +2,11 @@ from person import Student
 from account import StudentAccount
 from course import Course, IntensiveCourse, get_catalog
 from database_manager import DatabaseManager
+from user_base import DataHandler
 
 class SystemController:
     def __init__(self):
-        self.db = DatabaseManager()
+        self.db:DataHandler = DatabaseManager()
 
     def run(self):
         while True:
@@ -16,10 +17,9 @@ class SystemController:
             print("2. [Courses]      View Course Catalog")
             print("3. [Records]      View Registration Database")
             print("4. [Manage]       Edit/Delete Records")
-            print("5. [Security]     Check User Permissions")
-            print("6. [System]       Exit")
+            print("5. [System]       Exit")
             
-            choice = input("\nSelect a system option (1-6): ")
+            choice = input("\nSelect a system option (1-5): ")
 
             if choice == "1":
                 name = input("Enter Full Name: ")
@@ -50,9 +50,6 @@ class SystemController:
                 elif sub == "2":
                     print("Database Cleared." if self.db.clear_database() else "Empty.")
             elif choice == "5":
-                u = Student("Security_Audit")
-                print(f"User: {u.name} | {u.get_access_level()}")
-            elif choice == "6":
                 print("System offline. Goodbye!")
                 break
             input("\nPress Enter to continue...")

@@ -1,6 +1,7 @@
 import os
+from user_base import DataHandler
 
-class DatabaseManager:
+class DatabaseManager(DataHandler):
     def __init__(self, filename="institution_db.txt"):
         self.filename = filename
 

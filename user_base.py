@@ -1,6 +1,14 @@
 from abc import ABC, abstractmethod
 
-class User(ABC):
+class DataHandler(ABC):
     @abstractmethod
-    def get_access_level(self):
+    def save(self, data):
+        pass
+
+    @abstractmethod
+    def read_all(self):
+        pass
+    
+    @abstractmethod
+    def delete_record(self, name):
         pass
